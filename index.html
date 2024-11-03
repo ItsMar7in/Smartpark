@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="icon"  href="img/4-removebg-preview.png" sizes="128x128" type="image/png" >
+    <link rel="icon" href="img/fav.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -58,11 +58,32 @@
         </div>
     </section>
 
+     <!-- Promo App -->
+     <section id="app-promo" class="app-promo">
+        <div class="app-promo-content">
+            <h2>Fácil y seguro</h2>
+            <p>
+                Descarga gratis nuestra aplicación y ¡ahorra tiempo y dinero! Además, libérate de los abusos en las altas tarifas de los parqueaderos públicos, no expongas tu vehículo a multas de tránsito y paga el precio justo por el parqueadero.
+            </p>
+            <div class="app-buttons">
+                <a href="#"><img src="img/app-store.png" alt="Disponible en App Store"></a>
+                <a href="#"><img src="img/google-play.png" alt="Disponible en Google Play"></a>
+            </div>
+        </div>
+        <div class="app-promo-image">
+            <a href="https://www.figma.com/proto/RldwC8oyNNeD6PB4zg11iv/SMART-PARK?node-id=187-14&node-type=canvas&t=ozWRvJdVM7WotnZi-0&scaling=scale-down&content-scaling=fixed&page-id=187%3A14&starting-point-node-id=332%3A56" target="_blank">
+            <img src="img/figura.png" alt="Aplicación móvil">
+        </a>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about">
         <h2>Sobre Nosotros</h2>
         <p>Somos una empresa dedicada a facilitar el acceso a parqueaderos de manera eficiente y rápida, ofreciendo a nuestros usuarios tranquilidad y seguridad en cada servicio.</p>
     </section>
+
+    
 
     <!-- Contact Section -->
     <section id="contact">
@@ -75,12 +96,52 @@
         </form>
     </section>
 
+    
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 SmartPark. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank">
+                <img src="img/facebook.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="img/twitter.png" alt="Twitter" class="social-icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="img/instagram.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="img/linkedin.png" alt="LinkedIn" class="social-icon">
+            </a>
+        </div>
     </footer>
+    
+    <!-- Botón flotante para volver al inicio -->
+<button id="backToTop" class="back-to-top" onclick="scrollToTop()">⬆️</button>
+
 
     <!-- Link to FontAwesome Icons for Service Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        // Mostrar el botón cuando se hace scroll hacia abajo
+        window.onscroll = function() {
+            let backToTopButton = document.getElementById("backToTop");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+    
+        // Función para hacer scroll hacia la parte superior de la página
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" // Hace que el desplazamiento sea gradual
+            });
+        }
+    </script>
+    
+
 </body>
 </html>

@@ -28,7 +28,47 @@ header {
     z-index: 10;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
-/* Capa semitransparente */
+
+/* Capa/* Ocultar el menú por defecto */
+nav ul {
+    display: none;
+}
+
+/* Ocultar el menú por defecto */
+nav ul {
+    display: none;
+    position: absolute; /* Posiciona el menú en el flujo de la página */
+    background-color: #333; /* Fondo para el menú desplegable */
+    padding: 10px;
+    border-radius: 5px;
+    left: 0px;
+    top: 60px; /* Ajusta para que el menú quede debajo del header */
+    width: 2px; /* Ocupa todo el ancho de la pantalla */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para el efecto de menú */
+}
+
+/* Mostrar el menú al pasar el mouse sobre el header */
+header:hover nav ul {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos */
+}
+
+/* Ajustar los elementos del menú */
+nav ul li {
+    margin: 10px 0; /* Espaciado entre cada elemento */
+}
+nav ul {
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Oculto por defecto */
+}
+
+
+header:hover nav ul {
+    opacity: 1; /* Muestra el menú en hover */
+}
+
+ /* semitransparente */
 #home::before {
     content: "";
     position: absolute;
@@ -305,14 +345,145 @@ nav ul li a:hover {
 
 
 /* Footer */
+/* Footer */
 footer {
     background-color: #333;
     color: #fff;
-    padding: 50px;
+    padding: 40px 20px;
     text-align: center;
     font-size: 1em;
     letter-spacing: 0.5px;
+    border-top: 3px solid #f4c542; /* Línea superior */
+    position: relative;
 }
+
+footer p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #ccc;
+}
+
+/* Iconos de redes sociales */
+footer .social-icons {
+    margin-top: 15px;
+}
+
+footer .social-icons a {
+    color: #f4c542;
+    margin: 0 10px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #fff;
+}
+/* Estilos para los iconos de redes sociales como imágenes */
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacio entre iconos */
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+.social-icon {
+    width: 30px; /* Tamaño de los iconos */
+    height: 30px;
+}
+/* Estilos para la sección de promoción de la app */
+.app-promo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #333; 
+    color: #fff;
+}
+
+.app-promo-content {
+    flex: 1;
+    max-width: 600px;
+    padding-right: 20px;
+}
+
+.app-promo h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.app-promo p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.app-buttons img {
+    width: 75px; /* Ajusta el tamaño de los botones */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.app-buttons img:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+.app-promo-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.app-promo-image img:hover{
+    transform: scale(1.15); /* Efecto de zoom al pasar el mouse */
+    transition: transform 0.3s ease;
+}
+.app-promo-image img {
+    width: 300px; 
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Estilos para el botón flotante */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none; /* Oculto por defecto */
+    width: 50px;
+    height: 50px;
+    background-color: #f1d42e; /* Color morado */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #5e005e; /* Cambia el color al pasar el mouse */
+}
+
+
+
 
 @media (max-width: 768px) {
     nav ul {
