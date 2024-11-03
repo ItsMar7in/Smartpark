@@ -25,14 +25,12 @@
         </nav>
     </header>
     
-
     <!-- Main Section -->
     <section id="home">
         <div class="hero-content">
             <h2>Encuentra tu espacio de parqueo fácil y rápido</h2>
             <p>Reserva tu lugar en los centros comerciales de la ciudad.</p>
             <a href="#services" class="btn">Ver Servicios</a>
-
         </div>
     </section>
 
@@ -83,8 +81,6 @@
         <p>Somos una empresa dedicada a facilitar el acceso a parqueaderos de manera eficiente y rápida, ofreciendo a nuestros usuarios tranquilidad y seguridad en cada servicio.</p>
     </section>
 
-    
-
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contacto</h2>
@@ -96,7 +92,6 @@
         </form>
     </section>
 
-    
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 SmartPark. Todos los derechos reservados.</p>
@@ -117,11 +112,11 @@
     </footer>
     
     <!-- Botón flotante para volver al inicio -->
-<button id="backToTop" class="back-to-top" onclick="scrollToTop()">⬆️</button>
-
+    <button id="backToTop" class="back-to-top" onclick="scrollToTop()">⬆️</button>
 
     <!-- Link to FontAwesome Icons for Service Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
     <script>
         // Mostrar el botón cuando se hace scroll hacia abajo
         window.onscroll = function() {
@@ -140,8 +135,20 @@
                 behavior: "smooth" // Hace que el desplazamiento sea gradual
             });
         }
-    </script>
-    
 
+        // Desplazamiento suave para enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                // Desplazamiento suave
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
